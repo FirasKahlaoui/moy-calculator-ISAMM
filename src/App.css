@@ -7,10 +7,16 @@ body{
   font-family : Inter , sans-serif;
 }
 
+.App{
+  background-color: var(--body_background);
+  min-height: 100vh;
+  color : var(--body_color);
+}
+
 nav{
   display: flex;
   align-items: center;
-  background-color: #21222A;
+  background-color: var(--body_background);
   height: 90px;
   padding: 30px 25px;
 }
@@ -27,7 +33,7 @@ nav{
 }
 
 .nav--title {
-  color: #DEEBF8;
+  color: var(--body_color);
   font-weight: 600;
 }
 
@@ -35,3 +41,37 @@ nav{
   height: 30px;
   margin-right: 7px;
 }
+
+.nav--container {
+  display: flex;
+  align-items: center;
+}
+
+.nav--title {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav--dark-mode {
+  margin-left: auto;
+}
+
+.nav--button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav--button:hover {
+  background-color: black;
+  color: white;
+}
+
