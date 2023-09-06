@@ -2,6 +2,7 @@
   --body_background: #ffffff;
   --body_color: #000000;
   --link_color: navy;
+  
 }
 
 [data-theme="dark"]{
@@ -9,6 +10,7 @@
   --body_color: #ffffff;
   --link_color: cyan;
 }
+
 
 *{
   transition: all 0.5s ease_in_out;

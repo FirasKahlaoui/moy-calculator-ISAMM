@@ -1,11 +1,37 @@
-*{
+/*---------------Default--CSS---------------*/
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  margin : 0;
-  font-family : Inter , sans-serif;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+
+/*---------------Global--CSS---------------*/
 
 .App{
   background-color: var(--body_background);
@@ -13,13 +39,70 @@ body{
   color : var(--body_color);
 }
 
-nav{
+/*---------------NavBar--CSS---------------*/
+
+.nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--body_background);
-  height: 90px;
-  padding: 30px 25px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.nav.transparent {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav.solid {
+  background-color: #fff;
+}
+
+.nav--logo_text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.nav--title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.nav--button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.nav--button:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+ .nav--logo_text {
+    display: none;
+  }
+
+ .nav--title {
+    font-size: 20px;
+  }
+
+ .nav--button {
+    font-size: 16px;
+  }
+}
+
 
 .nav--logo_text, .nav--title{
   margin : 0;
@@ -49,7 +132,10 @@ nav{
 
 .nav--title {
   margin-right: 20px;
-  margin-left: 20px;
+}
+
+.nav--button {
+  margin-right: 20px;
 }
 
 .nav--dark-mode {
@@ -73,5 +159,101 @@ nav{
 .nav--button:hover {
   background-color: black;
   color: white;
+}
+
+.nav--button:active {
+  transform: scale(0.98);
+}
+
+/*---------------Main-CSS---------------*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/img/old-black.jpg");
+  padding: 20px;
+}
+
+.main--subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main--text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #666666;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main--title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.main--form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.main--label {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main--select {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333333;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.main--button {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  width: 60%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #00a8ff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main--button:hover {
+  background-color: #0097e6;
 }
 
