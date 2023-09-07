@@ -26,7 +26,7 @@ export const Main = () => {
   };
   return (
     <section className="main" id="home">
-      <h2 className="main--subtitle">{t("title")}</h2>
+      <h1 className="main--mtitle">{t("title")}</h1>
       <p className="main--text">{t("description")}</p>
       <h3 className="main--title">{t("main-title")}</h3>
       <h5 className="main--subtitle">{t("main-subtitle")}</h5>

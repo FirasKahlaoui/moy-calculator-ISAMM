@@ -1,14 +1,35 @@
 :root{
-  --body_background: #ffffff;
-  --body_color: #000000;
+  --body_background: url("./assets/img/banner-bg.png");
+  --body_color: #ffffff;
   --link_color: navy;
+  --nav_background: rgb(39, 38, 38);
+  --nav_text_color: #ffffff;
+  --button_background: #33373f;
+  --button_color: #ffffff;
+  --button_hover_background: #838488;
+  --button_hover_color: #000000;
+  --form_background: #282c34;
+  --form_text_color: #ffffff;
+  --footer_background: rgb(26, 24, 24,0.9);
+  --footer_text_color: #fff;
+  --footer_icons_bg: #282c34;
   
 }
 
 [data-theme="dark"]{
-  --body_background: #282c34;
+  --body_background: url("./assets/img/banner-bg.png");
   --body_color: #ffffff;
   --link_color: cyan;
+  --nav_background: rgba(255, 255, 255, 0.05);
+  --button_background: #ffffff;
+  --button_color: #000000;
+  --button_hover_background: #0e0d0d;
+  --button_hover_color: #dbd7d7;
+  --form_background: #ffffff;
+  --form_text_color: #000000;
+  --footer_background: rgba(255, 255, 255, 0.05);
+  --footer_text_color: #ffffff;
+  --footer_icons_bg: rgba(217, 217, 217, 0.1);
 }
 
 
