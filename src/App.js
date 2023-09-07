@@ -1,14 +1,11 @@
 import "./App.css";
-import { NavBar } from "./components/NavBar";
-import { Main } from "./components/Main";
-import { ContactMe } from "./components/ContactMe";
+import Home from "./Home"
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Main />
-      <ContactMe />
+      <Home />
+      
     </div>
   );
 }
