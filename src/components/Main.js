@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Main = () => {
   const { t, i18n } = useTranslation();
@@ -8,15 +8,15 @@ export const Main = () => {
   const [selectedClass, setSelectedClass] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const location = useLocation();
+
   const handleCategoryChange = (e) => {
-    console.log("Selected category:", e.target.value);
     setSelectedCategory(e.target.value);
     setSelectedClass(null);
     setSelectedSemester(null);
     setIsButtonDisabled(!e.target.value || !selectedClass || !selectedSemester);
   };
   const handleClassChange = (e) => {
-    console.log("Selected class:", e.target.value);
     setSelectedClass(e.target.value);
     setSelectedSemester(null);
     setIsButtonDisabled(
@@ -24,7 +24,6 @@ export const Main = () => {
     );
   };
   const handleSemesterChange = (e) => {
-    console.log("Selected semester:", e.target.value);
     setSelectedSemester(e.target.value);
     setIsButtonDisabled(!selectedCategory || !selectedClass || !e.target.value);
   };
@@ -41,24 +40,10 @@ export const Main = () => {
     3: ["--", "1 CM", "2 CM", "3 CM"],
     4: ["--", "1 MIME", "2 MIME", "3 MIME"],
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Selected category:", selectedCategory);
-    console.log("Selected class:", selectedClass);
-    console.log("Selected semester:", selectedSemester);
-    const queryString = new URLSearchParams({
-      category: selectedCategory,
-      class: selectedClass,
-      semester: selectedSemester,
-    });
-    window.location.href =
-      "/calc_pages/Calc_IM.js?category=" +
-      selectedCategory +
-      "&class=" +
-      selectedClass +
-      "&semester=" +
-      selectedSemester;
-  };
+
+  console.log(
+    `Data to be sent: category=${selectedCategory}, class=${selectedClass}, semester=${selectedSemester}`
+  );
 
   return (
     <section className="main" id="home">
@@ -66,7 +51,7 @@ export const Main = () => {
       <p className="main--text">{t("description")}</p>
       <h3 className="main--title">{t("main-title")}</h3>
       <h5 className="main--subtitle">{t("main-subtitle")}</h5>
-      <form className="main--form" onSubmit={handleSubmit}>
+      <form className="main--form">
         <label className="main--label">{t("main-label-diplome")}</label>
         <select className="main--select" onChange={handleCategoryChange}>
           <option value="">--</option>
@@ -88,27 +73,31 @@ export const Main = () => {
         <select className="main--select" onChange={handleSemesterChange}>
           {selectedClass && selectedClass.startsWith("3") ? (
             <>
-              <option value="0">--</option>
+              <option value="">--</option>
               <option value="1">1st Semester</option>
             </>
           ) : (
             <>
-              <option value="0">--</option>
-              <option
-                value="
-1"
-              >
-                1st Semester
-              </option>
+              <option value="">--</option>
+              <option value="1">1st Semester</option>
               <option value="2">2nd Semester</option>
             </>
           )}
         </select>
-        <Link to="/calculate" className="button--link">
-          <button className="main--button" disabled={isButtonDisabled}>
+
+        {/* Updated this part */}
+        {isButtonDisabled ? (
+          <button className="main--button" disabled={true}>
             {t("main-button")}
           </button>
-        </Link>
+        ) : (
+          <Link
+            to={`/calculate?category=${selectedCategory}&class=${selectedClass}&semester=${selectedSemester}`}
+            className="button--link"
+          >
+            <button className="main--button">{t("main-button")}</button>
+          </Link>
+        )}
       </form>
     </section>
   );
