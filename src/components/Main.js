@@ -9,12 +9,14 @@ export const Main = () => {
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const handleCategoryChange = (e) => {
+    console.log("Selected category:", e.target.value);
     setSelectedCategory(e.target.value);
     setSelectedClass(null);
     setSelectedSemester(null);
     setIsButtonDisabled(!e.target.value || !selectedClass || !selectedSemester);
   };
   const handleClassChange = (e) => {
+    console.log("Selected class:", e.target.value);
     setSelectedClass(e.target.value);
     setSelectedSemester(null);
     setIsButtonDisabled(
@@ -22,6 +24,7 @@ export const Main = () => {
     );
   };
   const handleSemesterChange = (e) => {
+    console.log("Selected semester:", e.target.value);
     setSelectedSemester(e.target.value);
     setIsButtonDisabled(!selectedCategory || !selectedClass || !e.target.value);
   };
@@ -40,14 +43,21 @@ export const Main = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create a query string of the selected values
+    console.log("Selected category:", selectedCategory);
+    console.log("Selected class:", selectedClass);
+    console.log("Selected semester:", selectedSemester);
     const queryString = new URLSearchParams({
       category: selectedCategory,
       class: selectedClass,
       semester: selectedSemester,
     });
-    // Redirect to the calcIM component with the query string as a prop
-    window.location.href = `/calc_pages/calcIM.js?${queryString.toString()}`;
+    window.location.href =
+      "/calc_pages/Calc_IM.js?category=" +
+      selectedCategory +
+      "&class=" +
+      selectedClass +
+      "&semester=" +
+      selectedSemester;
   };
 
   return (
@@ -84,7 +94,12 @@ export const Main = () => {
           ) : (
             <>
               <option value="0">--</option>
-              <option value="1">1st Semester</option>
+              <option
+                value="
+1"
+              >
+                1st Semester
+              </option>
               <option value="2">2nd Semester</option>
             </>
           )}
