@@ -23,13 +23,11 @@ const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
   const [formData, setFormData] = useState<FormData>({});
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, dataset } = event.target;
-    const index = dataset.index;
-    if (index !== undefined) {
-      const updatedGrades = [...(formData[name] || [])];
-      updatedGrades[Number(index)] = value;
-      setFormData({ ...formData, [name]: updatedGrades });
-    }
+    const { name, value, id } = event.target;
+    const index = id.split("-")[1];
+    const updatedGrades = [...(formData[name] || [])];
+    updatedGrades[Number(index)] = value;
+    setFormData({ ...formData, [name]: updatedGrades });
   };
 
   return (
@@ -47,6 +45,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
                 value={formData[subject.name]?.[index] || ""}
                 onChange={handleInputChange}
                 placeholder={`Coef: ${coef}`}
+                key={`${subject.name}-${index}`}
               />
             ))}
           </div>
