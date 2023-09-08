@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CreateForm from "../CreateForm.tsx";
+import { data } from "./data/2IM_Fond_1st.js";
 
 export const CalcIM = ({ location }) => {
   const [category, setCategory] = useState(null);
@@ -15,24 +16,6 @@ export const CalcIM = ({ location }) => {
     }
   }, [location]);
 
-  // Define your data object here
-  const data = {
-    regmix: {
-      coef: [0.3, 0.7],
-      subjects: [
-        { name: "Algebre 2", coef: 1.5, grades: [] },
-        // ... other subjects
-      ],
-    },
-    cc: {
-      coef: [0.4, 0.4, 0.2],
-      subjects: [
-        { name: "Eng 2", coef: 1, grades: [] },
-        // ... other subjects
-      ],
-    },
-  };
-
   return (
     <section className="calc--section">
       <h1 className="calc--title">{category}</h1>
@@ -40,7 +23,7 @@ export const CalcIM = ({ location }) => {
         {classNumber} - {semester}
       </p>
       <form className="calc--form">
-        <CreateForm data={data} /> {/* Use the CreateForm component here */}
+        <CreateForm data={data} />
       </form>
     </section>
   );

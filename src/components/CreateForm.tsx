@@ -7,6 +7,7 @@ interface SubjectType {
 }
 
 interface CategoryType {
+  placeholder: string[];
   coef: number[];
   subjects: SubjectType[];
 }
@@ -44,7 +45,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
                 data-index={index}
                 value={formData[subject.name]?.[index] || ""}
                 onChange={handleInputChange}
-                placeholder={`Coef: ${coef}`}
+                placeholder={category.placeholder[index]}
                 key={`${subject.name}-${index}`}
               />
             ))}
