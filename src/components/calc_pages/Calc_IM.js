@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
 
 export const CalcIM = () => {
@@ -38,10 +38,7 @@ export const CalcIM = () => {
       </h1>
       <form className="calc--form">
         {data && <CreateForm data={data} />}
-        <input type="submit" value="Submit" className="data--submit-button" />
-      
       </form>
-
     </section>
   );
 };

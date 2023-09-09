@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Calculate from "./pages/Calculate";
+import Result from "./pages/Result";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Calculate />
+      </div>
+    ),
+  },
+  {
+    path: "/result",
+    element: (
+      <div>
+        <Result />
       </div>
     ),
   },
