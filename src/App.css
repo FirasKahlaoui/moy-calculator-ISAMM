@@ -85,9 +85,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 .nav--logo_text{
-  margin-right: auto;
+  margin:0;
   color : #6aDAFB;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 22px;
 }
 
@@ -99,6 +99,17 @@ input:focus, textarea:focus, select:focus {
 .nav--icon{
   height: 30px;
   margin-right: 7px;
+}
+
+.nav--link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav--link:hover {
+  text-decoration: underline;
 }
 
 .nav--container {
@@ -213,6 +224,7 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color:var(--form_background);
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .main--label {
@@ -359,44 +371,47 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 
 .calc--title {
   text-align: center;
-  font-size: 26px;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
 }
 
+.calc--form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
 .calc--form label {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
-  display: inline-block;
-  width: 22%;
+  display: block;
 }
 
 .calc--form input[type="text"] {
   padding: 10px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
 }
-
-/*.calc--form label.two-inputs {
-  width: 45%;
-}
-
-.calc--form label.three-inputs {
-  width: 30%;
-}*/
-
 
 .calc--form input[type="submit"] {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -406,7 +421,6 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 .calc--form input[type="submit"]:hover {
   background-color: #555;
 }
-
 
 
 
