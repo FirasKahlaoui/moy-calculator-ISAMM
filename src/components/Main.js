@@ -9,6 +9,8 @@ export const Main = () => {
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const location = useLocation();
+  console.log(location);
+  console.log("i18n", i18n);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);

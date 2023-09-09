@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const { t, i18n } = useTranslation();
+  console.log(t);
 
   return (
     <div className="nav--container">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
 
 export const CalcIM = () => {
@@ -36,9 +36,7 @@ export const CalcIM = () => {
       <h1 className="calc--title">
         {classNumber} - {semester} Semester
       </h1>
-      <form className="calc--form">
-        {data && <CreateForm data={data} />}
-      </form>
+      <form className="calc--form">{data && <CreateForm data={data} />}</form>
     </section>
   );
 };
