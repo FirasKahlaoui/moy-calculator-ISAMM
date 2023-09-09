@@ -85,7 +85,6 @@ export const Main = () => {
           )}
         </select>
 
-        {/* Updated this part */}
         {isButtonDisabled ? (
           <button className="main--button" disabled={true}>
             {t("main-button")}

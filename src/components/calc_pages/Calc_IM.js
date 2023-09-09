@@ -8,7 +8,7 @@ export const CalcIM = () => {
   const [semester, setSemester] = useState(null);
   const [data, setData] = useState(null);
 
-  const location = useLocation(); // Added this line
+  const location = useLocation();
   console.log(location);
 
   useEffect(() => {
@@ -33,11 +33,15 @@ export const CalcIM = () => {
 
   return (
     <section className="calc--section">
-      <h1 className="calc--title">{category}</h1>
-      <p className="calc--subtitle">
-        {classNumber} {semester}
-      </p>
-      <form className="calc--form">{data && <CreateForm data={data} />}</form>
+      <h1 className="calc--title">
+        {classNumber} - {semester} Semester
+      </h1>
+      <form className="calc--form">
+        {data && <CreateForm data={data} />}
+        <input type="submit" value="Submit" className="data--submit-button" />
+      
+      </form>
+
     </section>
   );
 };

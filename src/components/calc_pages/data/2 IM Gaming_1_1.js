@@ -1,5 +1,6 @@
 export const data = {
   regmix: {
+    name: "regmix",
     placeholder: ["DS x 0.3", "Exam x 0.7"],
     coef: [0.3, 0.7],
     subjects: [
@@ -23,6 +24,7 @@ export const data = {
     ],
   },
   cc: {
+    name: "cc",
     placeholder: ["DS1 x 0.4", "DS2 x 0.4", "CC x 0.2"],
     coef: [0.4, 0.4, 0.2],
     subjects: [

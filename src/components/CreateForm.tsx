@@ -7,6 +7,7 @@ interface SubjectType {
 }
 
 interface CategoryType {
+  name: string;
   placeholder: string[];
   coef: number[];
   subjects: SubjectType[];
@@ -36,7 +37,9 @@ const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
       {Object.values(data).map((category) =>
         category.subjects.map((subject) => (
           <div key={subject.name}>
-            <label htmlFor={subject.name}>{subject.name}</label>
+            <label htmlFor={subject.name} className={category.name === "regmix" ? "two-inputs" : "three-inputs"}>
+              {subject.name}
+            </label>
             {category.coef.map((coef, index) => (
               <input
                 type="text"
