@@ -354,8 +354,11 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 
 .footer--text {
   font-size: 16px;
+  text-align: center;
   color: var(--secondary-color);
   margin-bottom: 10px;
+  max-width: 410px;
+  margin: 10px auto;
 }
 
 /*---------------Clac--CSS---------------*/
