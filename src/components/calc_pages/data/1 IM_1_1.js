@@ -4,7 +4,7 @@ export const data = {
     placeholder: ["DS x 0.3", "Exam x 0.7"],
     coef: [0.3, 0.7],
     subjects: [
-      { name: "Algèbre1 (1.5) ", coef: 1.5, grades: [] },
+      { name: "Algèbre1 (1.5)", coef: 1.5, grades: [] },
       { name: "Analyse1 (1.5)", coef: 1.5, grades: [] },
       { name: "Algo (2)", coef: 2, grades: [] },
       { name: "C (1.5)", coef: 1.5, grades: [] },

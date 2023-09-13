@@ -384,19 +384,19 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 .calc--form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   border: 1px solid #ccc;
   padding: 20px;
   margin: 0 auto;
-  max-width: 1000px;
-  border-radius: 10px;
+  max-width: 50%;
+  border-radius: 25px;
 }
 
 .calc--form label {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #333;
   display: block;
 }
@@ -405,11 +405,11 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   padding: 10px;
   font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   width: 100%;
-  max-width: 300px;
+  max-width: 100%;
 }
 
 .calc--form input[type="submit"] {
@@ -418,7 +418,7 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

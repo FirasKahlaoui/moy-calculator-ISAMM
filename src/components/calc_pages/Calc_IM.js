@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
 
 export const CalcIM = () => {
@@ -7,9 +7,9 @@ export const CalcIM = () => {
   const [classNumber, setClassNumber] = useState(null);
   const [semester, setSemester] = useState(null);
   const [data, setData] = useState(null);
+  const [formData, setFormData] = useState({});
 
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (location && location.search) {
@@ -17,9 +17,6 @@ export const CalcIM = () => {
       setCategory(queryString.get("category"));
       setClassNumber(queryString.get("class"));
       setSemester(queryString.get("semester"));
-      console.log(`category: ${category}`);
-      console.log(`classNumber: ${classNumber}`);
-      console.log(`semester: ${semester}`);
     }
   }, [location, category, classNumber, semester]);
 
@@ -31,16 +28,41 @@ export const CalcIM = () => {
     }
   }, [category, classNumber, semester]);
 
+  const handleInputChange = (event) => {
+    const { name, value, id } = event.target;
+    const index = id.split("-")[1];
+    console.log(`name: ${name}, value: ${value}, index: ${index}`);
+    setFormData((prevFormData) => {
+      const updatedGrades = [...(prevFormData[name] || [])];
+      updatedGrades[Number(index)] = value;
+      return { ...prevFormData, [name]: updatedGrades };
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+  };
+
   return (
     <section className="calc--section">
       <h1 className="calc--title">
         {classNumber} - {semester} Semester
       </h1>
-      <form className="calc--form">
-        {data && <CreateForm data={data} />}
-        <Link to="/result" className="data--submit-button">
-          <input type="submit" value="Submit" className="data--submit-button" />
-        </Link>
+      <form className="calc--form" onSubmit={handleSubmit}>
+        {data && (
+          <CreateForm
+            data={data}
+            formData={formData}
+            setFormData={setFormData}
+            onInputChange={handleInputChange}
+          />
+        )}
+        <input
+          type="submit"
+          value="Calculate"
+          className="data--submit-button"
+        />
       </form>
     </section>
   );

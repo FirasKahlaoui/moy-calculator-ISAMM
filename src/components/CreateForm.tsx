@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "../App.css"
+import React from "react";
 
 interface SubjectType {
   name: string;
@@ -20,21 +19,24 @@ interface FormData {
 
 interface CreateFormProps {
   data: { [key: string]: CategoryType };
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
 }
 
-const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
-  const [formData, setFormData] = useState<FormData>({});
+const CreateForm: React.FC<CreateFormProps> = ({ data, formData, setFormData }) => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, id } = event.target;
     const index = id.split("-")[1];
-    const updatedGrades = [...(formData[name] || [])];
-    updatedGrades[Number(index)] = value;
-    setFormData({ ...formData, [name]: updatedGrades });
+    setFormData((prevFormData) => {
+      const updatedGrades = [...(prevFormData[name] || [])];
+      updatedGrades[Number(index)] = value;
+      return { ...prevFormData, [name]: updatedGrades };
+    });
   };
 
   return (
-    <form>
+    <>
       {Object.values(data).map((category) =>
         category.subjects.map((subject) => (
           <div key={subject.name}>
@@ -60,7 +62,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ data }) => {
           </div>
         ))
       )}
-    </form>
+    </>
   );
 };
 
