@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
+import { calculateAverage } from "../Formula.tsx";
 
 export const CalcIM = () => {
   const [category, setCategory] = useState(null);
@@ -41,7 +42,22 @@ export const CalcIM = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    const formDataWithWeights = {};
+    for (let subject in formData) {
+      let weight = subject.match(/\(([^)]+)\)/);
+      if (weight) {
+        weight = parseFloat(weight[1]);
+        if (isNaN(weight)) {
+          weight = 1;
+        }
+      } else {
+        weight = 1;
+      }
+      formDataWithWeights[subject] = [weight, ...formData[subject]];
+    }
+    console.log(formDataWithWeights);
+    const average = calculateAverage(formDataWithWeights);
+    console.log("Weighted average:", average);
   };
 
   return (

@@ -9,7 +9,7 @@ export const data = {
       { name: "Algo (1.5)", coef: 1.5, grades: [] },
       { name: "C (1)", coef: 1, grades: [] },
       { name: "Python (1)", coef: 1, grades: [] },
-      { name: "SE1 (1.5)", coef: 1.5, grades: [] },
+      { name: "SE2 (1.5)", coef: 1.5, grades: [] },
       { name: "Réseaux (2)", coef: 2, grades: [] },
       { name: "Dase de Données (2)", coef: 2, grades: [] },
     ],
