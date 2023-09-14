@@ -420,8 +420,12 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  max-width: 100%;
   transition: background-color 0.3s ease;
 }
+
+
+
 
 .calc--form input[type="submit"]:hover {
   background-color: #555;

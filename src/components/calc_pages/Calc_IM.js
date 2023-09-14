@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
 import { calculateAverage } from "../Formula.tsx";
 
@@ -9,8 +9,11 @@ export const CalcIM = () => {
   const [semester, setSemester] = useState(null);
   const [data, setData] = useState(null);
   const [formData, setFormData] = useState({});
+  const [average, setAverage] = useState(null);
+  console.log("average", average);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location && location.search) {
@@ -56,8 +59,10 @@ export const CalcIM = () => {
       formDataWithWeights[subject] = [weight, ...formData[subject]];
     }
     console.log(formDataWithWeights);
-    const average = calculateAverage(formDataWithWeights);
-    console.log("Weighted average:", average);
+    const averageCalculation = calculateAverage(formDataWithWeights);
+    setAverage(averageCalculation);
+    console.log("Weighted average:", averageCalculation);
+    navigate("/result", { state: { average: averageCalculation } });
   };
 
   return (
