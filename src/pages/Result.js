@@ -47,7 +47,7 @@ export const Result = () => {
           <NavBar />
           <div className="result--container">
             <h1 className="Result--Title">{t("result_title")}</h1>
-            <p className="Result--text">{average}</p>
+            <p className="Result--text">{average.toFixed(2)}</p>
             {average >= 10 && <p className="Result--mention">{mention}</p>}
           </div>
         </>
