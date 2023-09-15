@@ -461,19 +461,50 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 /* Result Loader */
 .loader {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  font-size: large;
+  background-color: #f5f5f5;
 }
 
 .loading-text {
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #666666;
 }
 
 /* Result Section */
- 
+.result--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Result--Title {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #333333;
+  text-align: center;
+}
+
+.Result--text {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #666666;
+  text-align: center;
+}
+
+.Result--mention {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #00b300;
+  text-align: center;
+}
+
+
 

@@ -16,6 +16,19 @@ export const Result = () => {
     }, 2000);
   }, []);
 
+  let mention = "";
+  if (average >= 10) {
+    if (average >= 10 && average < 12) {
+      mention = "Mention passable";
+    } else if (average >= 12 && average < 14) {
+      mention = "Mention assez bien";
+    } else if (average >= 14 && average < 16) {
+      mention = "Mention bien";
+    } else if (average >= 16 && average <= 20) {
+      mention = "Mention très bien";
+    }
+  }
+
   return (
     <div>
       {loading ? (
@@ -26,8 +39,11 @@ export const Result = () => {
       ) : (
         <>
           <NavBar />
-          <h1>Result</h1>
-          <p>Weighted average: {average}</p>
+          <div className="result--container">
+            <h1 className="Result--Title">Result</h1>
+            <p className="Result--text">Weighted average: {average}</p>
+            {average >= 10 && <p className="Result--mention">{mention}</p>}
+          </div>
         </>
       )}
     </div>
