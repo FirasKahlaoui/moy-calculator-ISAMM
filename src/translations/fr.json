@@ -2,7 +2,7 @@
     "Title": "ISAMM - Calculateur de Moyenne",
     "title": "Calculateur de semestre",
     "description": "Un outil simple et convivial pour les étudiants universitaires afin de calculer leurs moyennes de semestre et de planifier leurs objectifs académiques. Avec le Calculateur de semestre, vous pouvez saisir vos cours, crédits et notes, et obtenir votre moyenne de semestre en quelques secondes. Vous pouvez également ajuster vos notes et voir comment elles affectent votre moyenne. Le Calculateur de semestre vous aide à suivre vos progrès académiques et à atteindre vos résultats souhaités.",
-    "main-title": "Commençons",
+    "main-title": "C'est parti!",
     "main-subtitle": "Bonne chance",
     "main-label-diplome": "Diplôme",
     "main-label-class": "Classe",
@@ -13,5 +13,9 @@
     "semester": "Semestre",
     "data_submit_button": "Calculer",
     "result_title": "Votre moyenne de semestre est",
-    "result_loader_text": "Calcul en cours"
+    "result_loader_text": "Calcul en cours",
+    "mention1":"Très bien",
+    "mention2":"Bien",
+    "mention3":"Assez bien",
+    "mention4":"Passable"
 }
