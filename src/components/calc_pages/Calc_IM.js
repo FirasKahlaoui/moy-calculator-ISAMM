@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import CreateForm from "../CreateForm.tsx";
+import { useTranslation } from "react-i18next";
 import { calculateAverage } from "../Formula.tsx";
 
 export const CalcIM = () => {
@@ -11,6 +12,7 @@ export const CalcIM = () => {
   const [formData, setFormData] = useState({});
   const [average, setAverage] = useState(null);
   console.log("average", average);
+  const {t} = useTranslation();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -68,7 +70,7 @@ export const CalcIM = () => {
   return (
     <section className="calc--section">
       <h1 className="calc--title">
-        {classNumber} - {semester} Semester
+        {classNumber} - {semester} {t("semester")}
       </h1>
       <form className="calc--form" onSubmit={handleSubmit}>
         {data && (
@@ -81,7 +83,7 @@ export const CalcIM = () => {
         )}
         <input
           type="submit"
-          value="Calculate"
+          value={t("data_submit_button")}
           className="data--submit-button"
         />
       </form>

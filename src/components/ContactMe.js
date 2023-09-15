@@ -1,15 +1,14 @@
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon5 from "../assets/img/github-mark.svg";
+import { useTranslation } from "react-i18next";
 import navIcon6 from "../assets/img/website-ui-svgrepo-com.svg";
 
 export const ContactMe = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
-      <h3 className="footer--title">Reach Me</h3>
-      <p className="footer--text">
-        You can view my portfolio website, my LinkedIn profile, You can also
-        find my code on GitHub
-      </p>
+      <h3 className="footer--title">{t("contact_me_title")}</h3>
+      <p className="footer--text">{t("contact_me_text")}</p>
       <div className="social-icon">
         <a href="https://ifiras.pages.dev/" target="blank">
           <img src={navIcon6} alt="Icon" title="iFiras" />

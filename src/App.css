@@ -69,13 +69,6 @@ input:focus, textarea:focus, select:focus {
   background-color: #fff;
 }
 
-.nav--logo_text {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
 .nav--title {
   color: #fff;
   font-size: 24px;
@@ -88,7 +81,7 @@ input:focus, textarea:focus, select:focus {
 
 .nav--logo_text{
   margin:0;
-  color : #6aDAFB;
+  color : var(--nav_logo_text_color);
   font-weight: bold;
   font-size: 22px;
 }

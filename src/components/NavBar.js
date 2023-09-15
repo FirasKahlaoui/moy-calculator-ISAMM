@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const { t, i18n } = useTranslation();
-  console.log(t);
 
   return (
     <div className="nav--container">
@@ -14,7 +13,7 @@ export const NavBar = () => {
           <img src={logo} alt="logo" className="nav--icon" />
           <h3 className="nav--logo_text">MyISAMMGrade</h3>
         </Link>
-        <h4 className="nav--title">ISAMM - Grade Calculator</h4>
+        <h4 className="nav--title">{t("Title")}</h4>
         {i18n.language === "fr" && (
           <button
             className="nav--button"

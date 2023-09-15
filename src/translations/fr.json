@@ -1,10 +1,17 @@
 {
-    "title": "Calculatrice de semestre",
-    "description": "Un outil simple et facile à utiliser pour les étudiants universitaires qui calcule leurs moyennes de semestre et planifie leurs objectifs académiques. Avec Semester Calculator, vous pouvez saisir vos cours, crédits et notes, et obtenir votre moyenne de semestre en quelques secondes. Vous pouvez également ajuster vos notes et voir comment elles affectent votre moyenne. Semester Calculator vous aide à rester à la pointe de votre progression académique et à atteindre vos résultats désirés.",
-    "main-title":"Commencez maintenant",
-    "main-subtitle" :"Bonne Chance",
-    "main-label-diplome":"Diplôme",
-    "main-label-class":"Classe",
-    "main-label-semester":"Semestre",
-    "main-button":"Démarrer"
+    "Title": "ISAMM - Calculateur de Moyenne",
+    "title": "Calculateur de semestre",
+    "description": "Un outil simple et convivial pour les étudiants universitaires afin de calculer leurs moyennes de semestre et de planifier leurs objectifs académiques. Avec le Calculateur de semestre, vous pouvez saisir vos cours, crédits et notes, et obtenir votre moyenne de semestre en quelques secondes. Vous pouvez également ajuster vos notes et voir comment elles affectent votre moyenne. Le Calculateur de semestre vous aide à suivre vos progrès académiques et à atteindre vos résultats souhaités.",
+    "main-title": "Commençons",
+    "main-subtitle": "Bonne chance",
+    "main-label-diplome": "Diplôme",
+    "main-label-class": "Classe",
+    "main-label-semester": "Semestre",
+    "main-button": "Démarrer",
+    "contact_me_title": "Contactez-moi",
+    "contact_me_text": "Vous pouvez consulter mon site web de portfolio, mon profil LinkedIn, et vous pouvez également trouver mon code sur GitHub.",
+    "semester": "Semestre",
+    "data_submit_button": "Calculer",
+    "result_title": "Votre moyenne de semestre est",
+    "result_loader_text": "Calcul en cours"
 }
