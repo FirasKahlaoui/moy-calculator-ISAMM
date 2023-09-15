@@ -49,6 +49,17 @@ export const Result = () => {
             <h1 className="Result--Title">{t("result_title")}</h1>
             <p className="Result--text">{average.toFixed(2)}</p>
             {average >= 10 && <p className="Result--mention">{mention}</p>}
+            <div className="button-container">
+              <button
+                className="button"
+                onClick={() => (window.location.href = "/")}
+              >
+                {t("back_home_button")}
+              </button>
+              <button className="button" onClick={() => window.history.back()}>
+                {t("back_previous_button")}
+              </button>
+            </div>
           </div>
         </>
       )}

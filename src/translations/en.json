@@ -17,5 +17,7 @@
     "mention1":"With Highest Honors",
     "mention2":"With Honors",
     "mention3":"Satisfactory",
-    "mention4":"Passable"
+    "mention4":"Passable",
+    "back_home_button":"Back to Home",
+    "back_previous_button":"Calculate Again"
 }

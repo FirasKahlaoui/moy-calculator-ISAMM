@@ -41,6 +41,7 @@ input:focus, textarea:focus, select:focus {
   min-height: 100vh;
   color : var(--body_color);
   padding: 20px 0 0 0;
+  transition: background-image 0.3s ease-in-out;
   
 }
 
@@ -442,6 +443,7 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-image 0.3s ease-in-out;
 }
 
 .calc--title {
@@ -579,6 +581,24 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   text-align: center;
 }
 
+.button {
+  background-color: var(--button_background_color);
+  color: var(--button_text_color);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+.button:hover {
+  background-color: var(--button_hover_background_color);
+  color: var(--button_hover_color);
+}
+
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .loader {
@@ -603,6 +623,10 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
 
   .Result--mention {
     font-size: 1rem; 
+  }
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
 

@@ -17,5 +17,7 @@
     "mention1":"Très bien",
     "mention2":"Bien",
     "mention3":"Assez bien",
-    "mention4":"Passable"
+    "mention4":"Passable",
+    "back_home_button": "Retour à l'accueil",
+    "back_previous_button": "Calculer de nouveau"
 }

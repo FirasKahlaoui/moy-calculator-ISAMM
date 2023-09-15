@@ -21,6 +21,10 @@
   --footer_background: rgb(26, 24, 24,0.9);
   --footer_text_color: #fff;
   --footer_icons_bg: #282c34;
+  --button_background_color: #33373f;
+  --button_text_color: #ffffff;
+  --button_hover_background_color: #838488;
+  --button_hover_color: #fff;
   
 }
 
@@ -46,6 +50,10 @@
   --footer_background: rgba(255, 255, 255, 0.05);
   --footer_text_color: #ffffff;
   --footer_icons_bg: rgba(217, 217, 217, 0.1);
+  --button_background_color: #ffffff;
+  --button_text_color: #000000;
+  --button_hover_background_color: #0e0d0d;
+  --button_hover_color: #dbd7d7;
 }
 
 
