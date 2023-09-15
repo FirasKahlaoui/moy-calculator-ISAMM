@@ -41,7 +41,9 @@ input:focus, textarea:focus, select:focus {
   min-height: 100vh;
   color : var(--body_color);
   padding: 20px 0 0 0;
+  
 }
+
 
 /*---------------NavBar--CSS---------------*/
 
@@ -453,5 +455,25 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
      width: 100%;
    }
  }
+
+
+/*---------------Result--CSS---------------*/
+/* Result Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: large;
+}
+
+.loading-text {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Result Section */
  
 
