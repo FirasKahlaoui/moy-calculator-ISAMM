@@ -1,8 +1,12 @@
 :root{
   --body_background: url("./assets/img/lightmood.jpg");
+  --result_background: url("./assets/img/resultlight.jpg");
   --calc_background: url("./assets/img/lightmood.jpg");
   --calc_text_color: #000000;
   --calc_border_color: #000000;
+  --result_text_color: #000000;
+  --result_loader_background: #ffffff;
+  --result_loader_color: #000000;
   --body_color: #000000;
   --link_color: navy;
   --nav_background: rgb(39, 38, 38);
@@ -22,9 +26,13 @@
 
 [data-theme="dark"]{
   --body_background: url("./assets/img/darkmood.jpg");
+  --result_background: url("./assets/img/resultdark.jpg");
   --calc_background: url("./assets/img/darkmode.jpg");
   --calc_text_color: #ffffff;
   --calc_border_color: #ffffff;
+  --result_text_color: #ffffff;
+  --result_loader_background: #000000;
+  --result_loader_color: #ffffff;
   --body_color: #ffffff;
   --link_color: cyan;
   --nav_background: rgba(255, 255, 255, 0.05);

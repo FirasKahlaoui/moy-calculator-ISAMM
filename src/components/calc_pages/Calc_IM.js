@@ -12,7 +12,7 @@ export const CalcIM = () => {
   const [formData, setFormData] = useState({});
   const [average, setAverage] = useState(null);
   console.log("average", average);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const location = useLocation();
   const navigate = useNavigate();

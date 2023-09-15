@@ -21,7 +21,7 @@ export const Result = () => {
   let mention = "";
   if (average >= 10) {
     if (average >= 10 && average < 12) {
-  mention = t("mention4");
+      mention = t("mention4");
     } else if (average >= 12 && average < 14) {
       mention = t("mention3");
     } else if (average >= 14 && average < 16) {
@@ -35,7 +35,11 @@ export const Result = () => {
     <div>
       {loading ? (
         <div className="loader">
-          <DotLoader color={"#ffffff"} loading={loading} size={90} />
+          <DotLoader
+            color="var(--result_loader_color)"
+            loading={loading}
+            size={90}
+          />
           <div className="loading-text">{loadingText}</div>
         </div>
       ) : (

@@ -12,7 +12,7 @@ export function calculateAverage(data: Data): number {
     let weightedSum = 0;
 
     if (grades.length === 3) {
-      weightedSum = Number(grades[1]) * 0.3 + Number(grades[2]) * 0.7;
+      weightedSum = Number(grades[1]) * 0.7 + Number(grades[2]) * 0.3;
     } else if (grades.length === 4) {
       weightedSum = Number(grades[1]) * 0.4 + Number(grades[2]) * 0.4 + Number(grades[3]) * 0.2;
     }

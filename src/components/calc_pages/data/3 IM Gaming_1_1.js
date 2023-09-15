@@ -1,8 +1,8 @@
 export const data = {
   regmix: {
     name: "regmix",
-    placeholder: ["DS x 0.3", "Exam x 0.7"],
-    coef: [0.3, 0.7],
+    placeholder: ["Exam x 0.7", "DS x 0.3"],
+    coef: [0.7, 0.3],
     subjects: [
       { name: "Big Data (1)", coef: 1, grades: [] },
       { name: "Cloud (1)", coef: 1, grades: [] },
