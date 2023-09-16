@@ -197,8 +197,12 @@ input:focus, textarea:focus, select:focus {
     display: none;
   }
   .nav--logo_text {
-    font-size: 12px;
+    font-size: 15px;
     margin-right: 44px; 
+  }
+  .nav--icon {
+    height: 25px;
+    margin-right: 7px;
   }
 }
 
