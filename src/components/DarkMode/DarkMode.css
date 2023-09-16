@@ -66,3 +66,39 @@
 .dark_mode_input:checked + .dark_mode_label svg.moon {
     fill: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+    .dark_mode {
+        margin-top: -21px;
+        margin-left: 0px;
+    }
+
+    .dark_mode_label {
+        width: 50px;
+        height: 25px;
+    }
+
+    .dark_mode_label:after {
+        width: 20px;
+        height: 20px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .dark_mode_input:checked + .dark_mode_label:after {
+        left: 48px;
+    }
+
+    .dark_mode_label svg {
+        width: 15px;
+        top: 4px;
+    }
+
+    .dark_mode_label svg.sun {
+        left: 3px;
+    }
+
+    .dark_mode_label svg.moon {
+        left: 30px;
+    }
+}

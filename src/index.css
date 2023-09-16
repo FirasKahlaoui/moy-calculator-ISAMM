@@ -5,7 +5,7 @@
   --calc_text_color: #000000;
   --calc_border_color: #000000;
   --result_text_color: #000000;
-  --result_loader_background: #ffffff;
+  --result_loader_background: url("./assets/img/lightmood.jpg");
   --result_loader_color: #000000;
   --body_color: #000000;
   --link_color: navy;
@@ -25,6 +25,9 @@
   --button_text_color: #ffffff;
   --button_hover_background_color: #838488;
   --button_hover_color: #fff;
+  --main_select_color: #f0f0f0;
+  --main_select_text_color: #333333;
+  --nav_scroll_background: rgb(39, 38, 38,1);
   
 }
 
@@ -35,7 +38,7 @@
   --calc_text_color: #ffffff;
   --calc_border_color: #ffffff;
   --result_text_color: #ffffff;
-  --result_loader_background: #000000;
+  --result_loader_background: url("./assets/img/darkmood.jpg");
   --result_loader_color: #ffffff;
   --body_color: #ffffff;
   --link_color: cyan;
@@ -54,6 +57,9 @@
   --button_text_color: #000000;
   --button_hover_background_color: #0e0d0d;
   --button_hover_color: #dbd7d7;
+  --main_select_color: #282c34;
+  --main_select_text_color: #fff;
+  --nav_scroll_background: rgb(39, 38, 38,1);
 }
 
 
