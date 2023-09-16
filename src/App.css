@@ -15,7 +15,10 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-image: var(--body_nav_background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #fff !important;
   font-family: 'Inclusive Sans', sans-serif;
   
@@ -46,9 +49,12 @@ input:focus, textarea:focus, select:focus {
   transition: background-image 0.3s ease-in-out;
   
 }
-/**/
+/*-----------------Fix_NavBar----------------*/
 .Home_nav{
   margin-bottom: 70px;
+}
+.Home_nav_result{
+  margin-bottom: 0px;
 }
 
 /*---------------NavBar--CSS---------------*/
@@ -74,10 +80,11 @@ input:focus, textarea:focus, select:focus {
 
 .nav.solid {
   background-color: var(--nav_scroll_background);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  height: 60px;
 }
 
 .nav--title {
-  
   font-size: 24px;
   font-weight: bold;
   margin-left: 20px;
@@ -571,7 +578,7 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100vh;
   background-image: var(--result_background);
   background-repeat: no-repeat;
   background-size: cover;

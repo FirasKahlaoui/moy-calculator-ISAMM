@@ -1,10 +1,12 @@
 import { NavBar } from "../components/NavBar";
-import {CalcIM} from "../components/calc_pages/Calc_IM";
+import { CalcIM } from "../components/calc_pages/Calc_IM";
 
 export default function Calculate() {
   return (
     <div>
-      <NavBar />
+      <div className="Home_nav">
+        <NavBar />
+      </div>
       <div>
         <CalcIM />
       </div>

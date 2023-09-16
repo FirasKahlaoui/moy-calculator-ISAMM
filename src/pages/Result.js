@@ -44,7 +44,9 @@ export const Result = () => {
         </div>
       ) : (
         <>
-          <NavBar />
+          <div className="Home_nav_result">
+            <NavBar />
+          </div>
           <div className="result--container">
             <h1 className="Result--Title">{t("result_title")}</h1>
             <p className="Result--text">{average.toFixed(2)}</p>

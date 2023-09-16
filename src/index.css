@@ -1,5 +1,6 @@
 :root{
   --body_background: url("./assets/img/lightmood.jpg");
+  --body_nav_background: url("./assets/img/lightmood.jpg");
   --result_background: url("./assets/img/lightmood.jpg");
   --calc_background: url("./assets/img/lightmood.jpg");
   --calc_text_color: #000000;
@@ -33,6 +34,7 @@
 
 [data-theme="dark"]{
   --body_background: url("./assets/img/darkmood.jpg");
+  --body_nav_background: url("./assets/img/darkmood.jpg");
   --result_background: url("./assets/img/darkmood.jpg");
   --calc_background: url("./assets/img/darkmood.jpg");
   --calc_text_color: #ffffff;
