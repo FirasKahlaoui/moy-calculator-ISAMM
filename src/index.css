@@ -11,7 +11,7 @@
   --link_color: navy;
   --nav_background: rgb(39, 38, 38);
   --nav_logo_text_color: #38c9f6;
-  --nav_text_color: #ffffff;
+  --nav_text_color: #3c3a3a;
   --button_background: #33373f;
   --button_color: #ffffff;
   --button_hover_background: #838488;
@@ -27,7 +27,7 @@
   --button_hover_color: #fff;
   --main_select_color: #f0f0f0;
   --main_select_text_color: #333333;
-  --nav_scroll_background: rgb(39, 38, 38,1);
+  --nav_scroll_background: rgb(162, 157, 157);
   
 }
 
@@ -44,6 +44,7 @@
   --link_color: cyan;
   --nav_background: rgba(255, 255, 255, 0.05);
   --nav_logo_text_color: #6aDAFB;
+  --nav_text_color: #ffffff;
   --button_background: #ffffff;
   --button_color: #000000;
   --button_hover_background: #0e0d0d;
