@@ -1,4 +1,5 @@
 /*---------------Default--CSS---------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,8 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: 'Inclusive Sans', sans-serif;
+  
 }
 
 input:focus, textarea:focus, select:focus {
