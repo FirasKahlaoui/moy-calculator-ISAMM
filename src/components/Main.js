@@ -1,16 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Main = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedClass, setSelectedClass] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const location = useLocation();
-  console.log(location);
-  console.log("i18n", i18n);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -43,10 +40,6 @@ export const Main = () => {
     4: ["--", "1 MIME", "2 MIME", "3 MIME"],
   };
 
-  console.log(
-    `Data to be sent: category=${selectedCategory}, class=${selectedClass}, semester=${selectedSemester}`
-  );
-
   return (
     <section className="main" id="home">
       <h1 className="main--mtitle">{t("title")}</h1>
@@ -54,16 +47,30 @@ export const Main = () => {
       <h3 className="main--title">{t("main-title")}</h3>
       <h5 className="main--subtitle">{t("main-subtitle")}</h5>
       <form className="main--form">
-        <label className="main--label">{t("main-label-diplome")}</label>
-        <select className="main--select" onChange={handleCategoryChange}>
+        <label htmlFor="select1" className="main--label">
+          {t("main-label-diplome")}
+        </label>
+        <select
+          name="select1"
+          id="select1"
+          className="main--select"
+          onChange={handleCategoryChange}
+        >
           <option value="">--</option>
           <option value="1">Licence IM</option>
           <option value="2">Licence BD</option>
           <option value="3">Licence CM</option>
           <option value="4">Licence MIME</option>
         </select>
-        <label className="main--label">{t("main-label-class")}</label>
-        <select className="main--select" onChange={handleClassChange}>
+        <label htmlFor="select2" className="main--label">
+          {t("main-label-class")}
+        </label>
+        <select
+          name="select2"
+          id="select2"
+          className="main--select"
+          onChange={handleClassChange}
+        >
           {selectedCategory &&
             optionsMap[selectedCategory].map((option, index) => (
               <option key={index} value={option}>
@@ -71,8 +78,15 @@ export const Main = () => {
               </option>
             ))}
         </select>
-        <label className="main--label">{t("main-label-semester")}</label>
-        <select className="main--select" onChange={handleSemesterChange}>
+        <label htmlFor="select3" className="main--label">
+          {t("main-label-semester")}
+        </label>
+        <select
+          name="select3"
+          id="select3"
+          className="main--select"
+          onChange={handleSemesterChange}
+        >
           {selectedClass && selectedClass.startsWith("3") ? (
             <>
               <option value="">--</option>

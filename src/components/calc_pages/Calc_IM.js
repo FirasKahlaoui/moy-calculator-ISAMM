@@ -11,7 +11,6 @@ export const CalcIM = () => {
   const [data, setData] = useState(null);
   const [formData, setFormData] = useState({});
   const [average, setAverage] = useState(null);
-  console.log("average", average);
   const { t } = useTranslation();
 
   const location = useLocation();
@@ -37,7 +36,6 @@ export const CalcIM = () => {
   const handleInputChange = (event) => {
     const { name, value, id } = event.target;
     const index = id.split("-")[1];
-    console.log(`name: ${name}, value: ${value}, index: ${index}`);
     setFormData((prevFormData) => {
       const updatedGrades = [...(prevFormData[name] || [])];
       updatedGrades[Number(index)] = value;
@@ -60,17 +58,15 @@ export const CalcIM = () => {
       }
       formDataWithWeights[subject] = [weight, ...formData[subject]];
     }
-    console.log(formDataWithWeights);
     const averageCalculation = calculateAverage(formDataWithWeights);
     setAverage(averageCalculation);
-    console.log("Weighted average:", averageCalculation);
     navigate("/result", { state: { average: averageCalculation } });
   };
 
   return (
     <section className="calc--section">
       <h1 className="calc--title">
-        {classNumber} - {semester} {t("semester")}
+        {classNumber} - {t("semester")} {semester}
       </h1>
       <form className="calc--form" onSubmit={handleSubmit}>
         {data && (
@@ -87,6 +83,11 @@ export const CalcIM = () => {
           className="data--submit-button"
         />
       </form>
+      {average && (
+        <p className="calc--average">
+          {t("average_label")} {average}
+        </p>
+      )}
     </section>
   );
 };
