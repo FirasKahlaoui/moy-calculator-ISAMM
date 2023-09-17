@@ -4,14 +4,18 @@ export const data = {
     placeholder: ["Exam x 0.7", "DS x 0.3"],
     coef: [0.7, 0.3],
     subjects: [
-      { name: "Algèbre2 (1.5) ", coef: 1.5, grades: [] },
-      { name: "Analyse2 (1.5)", coef: 1.5, grades: [] },
-      { name: "Algo (1.5)", coef: 1.5, grades: [] },
-      { name: "C (1)", coef: 1, grades: [] },
-      { name: "Python (1)", coef: 1, grades: [] },
-      { name: "SE2 (1.5)", coef: 1.5, grades: [] },
-      { name: "Réseaux (2)", coef: 2, grades: [] },
-      { name: "Dase de Données (2)", coef: 2, grades: [] },
+      { name: "Algèbre 2 (1.5) ", coef: 1.5, grades: [] },
+      { name: "Analyse 2 (1.5)", coef: 1.5, grades: [] },
+      {
+        name: "Algorithme, structure de données & complexité (1.5)",
+        coef: 1.5,
+        grades: [],
+      },
+      { name: "Atelier de programmation 2 (1)", coef: 1, grades: [] },
+      { name: "Programmation Python (1)", coef: 1, grades: [] },
+      { name: "Système d'exploitation 2 (1.5)", coef: 1.5, grades: [] },
+      { name: "Fondements des réseaux (2)", coef: 2, grades: [] },
+      { name: "Fondements des bases de données (2)", coef: 2, grades: [] },
     ],
   },
   cc: {
@@ -20,8 +24,8 @@ export const data = {
     coef: [0.4, 0.4, 0.2],
     subjects: [
       { name: "Anglais2 (1)", coef: 1, grades: [] },
-      { name: "Tech de Comm2 (1)", coef: 1, grades: [] },
-      { name: "2CN (1)", coef: 1, grades: [] },
+      { name: "Techniques de communication 2 (1)", coef: 1, grades: [] },
+      { name: "Culture & Compétences Numériques (1)", coef: 1, grades: [] },
     ],
   },
 };

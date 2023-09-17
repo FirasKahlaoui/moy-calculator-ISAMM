@@ -5,14 +5,14 @@ export const data = {
     coef: [0.7, 0.3],
     subjects: [
       {
-        name: "Numérisation et codage des objets Multimédia (1)",
+        name: "Numérisation & codage des objets Multimédia (1)",
         coef: 1,
         grades: [],
       },
       { name: "Traitement d'images numériques (1.5)", coef: 1.5, grades: [] },
       { name: "Infographie (1)", coef: 1, grades: [] },
       {
-        name: "Technologies et programmation web (1.5)",
+        name: "Technologies & programmation web (1.5)",
         coef: 1.5,
         grades: [],
       },
@@ -22,9 +22,11 @@ export const data = {
         grades: [],
       },
       { name: "Fondements & Programmation IA (1.5)", coef: 1.5, grades: [] },
-      { name: "Tests de logiciels (1)", coef: 1, grades: [] },
-      { name: "Droit informatique (1)", coef: 1, grades: [] },
-      { name: "Projet fédéré (1)", coef: 1, grades: [] },
+      {
+        name: "Tests de logiciels (Certification ISTQB) (1)",
+        coef: 1,
+        grades: [],
+      },
     ],
   },
   cc: {
@@ -33,8 +35,14 @@ export const data = {
     coef: [0.4, 0.4, 0.2],
     subjects: [
       { name: "Anglais 4 (1)", coef: 1, grades: [] },
-      { name: "2D (Unity) (1.5)", coef: 1.5, grades: [] },
-      { name: "3D (Maya) (1.5)", coef: 1.5, grades: [] },
+      {
+        name: "Droit informatique, protection des données & éthique (1)",
+        coef: 1,
+        grades: [],
+      },
+      { name: "Projet fédéré (Méthode Agile) (1)", coef: 1, grades: [] },
+      { name: "Animation 2D (Unity) (1.5)", coef: 1.5, grades: [] },
+      { name: "Animation 3D (Maya) (1.5)", coef: 1.5, grades: [] },
     ],
   },
 };

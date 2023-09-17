@@ -6,18 +6,18 @@ export const data = {
     subjects: [
       { name: "Probabilité & statistique (2)", coef: 2, grades: [] },
       {
-        name: "Théorie des langages et des Automates (1)",
+        name: "Théorie des langages & des Automates (1)",
         coef: 1,
         grades: [],
       },
       { name: "Graphes & optimisation (1)", coef: 1, grades: [] },
       {
-        name: "Conception des Systèmes d'Information (1.5)",
+        name: "Conception des Systèmes d'information (1.5)",
         coef: 1.5,
         grades: [],
       },
-      { name: "Java (2)", coef: 2, grades: [] },
-      { name: " Ingénierie des Bases de Données (1.5)", coef: 1.5, grades: [] },
+      { name: "Programmation Java (2)", coef: 2, grades: [] },
+      { name: "Ingénierie des Bases de Données (1.5)", coef: 1.5, grades: [] },
       { name: "Services des Réseaux (1)", coef: 1, grades: [] },
       { name: "Math pour le Multimédia (1.5)", coef: 1.5, grades: [] },
       { name: "Physique pour le Multimédia (1.5)", coef: 1.5, grades: [] },
