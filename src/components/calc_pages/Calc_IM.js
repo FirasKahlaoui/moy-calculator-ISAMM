@@ -4,6 +4,7 @@ import CreateForm from "../CreateForm.tsx";
 import { useTranslation } from "react-i18next";
 import { calculateAverage } from "../Formula.tsx";
 
+
 export const CalcIM = () => {
   const [category, setCategory] = useState(null);
   const [classNumber, setClassNumber] = useState(null);
@@ -60,7 +61,14 @@ export const CalcIM = () => {
     }
     const averageCalculation = calculateAverage(formDataWithWeights);
     setAverage(averageCalculation);
-    navigate("/result", { state: { average: averageCalculation } });
+    navigate("/result", {
+      state: {
+        average: averageCalculation,
+        category: category,
+        classNumber: classNumber,
+        semester: semester,
+      },
+    });
   };
 
   return (

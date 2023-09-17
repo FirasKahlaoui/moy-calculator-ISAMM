@@ -7,6 +7,8 @@ import DotLoader from "react-spinners/DotLoader";
 export const Result = () => {
   const location = useLocation();
   const average = location.state.average;
+  const classNumber = location.state.classNumber;
+  const semester = location.state.semester;
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [loadingText, setLoadingText] = useState("");
@@ -15,7 +17,7 @@ export const Result = () => {
     setLoadingText(t("result_loader_text"));
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1400);
   }, [t]);
 
   let mention = "";
@@ -48,6 +50,9 @@ export const Result = () => {
             <NavBar />
           </div>
           <div className="result--container">
+            <h1 className="calc--title">
+              {classNumber} - {t("semester")} {semester}
+            </h1>
             <h1 className="Result--Title">{t("result_title")}</h1>
             <p className="Result--text">{average.toFixed(2)}</p>
             {average >= 10 && <p className="Result--mention">{mention}</p>}
