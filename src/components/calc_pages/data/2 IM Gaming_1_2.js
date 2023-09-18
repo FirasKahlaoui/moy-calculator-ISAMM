@@ -40,7 +40,7 @@ export const data = {
         coef: 1,
         grades: [],
       },
-      { name: "Projet fédéré (Méthode Agile) (1)", coef: 1, grades: [] },
+      { name: "Projet fédéré [Méthode Agile] (1)", coef: 1, grades: [] },
       { name: "Animation 2D [Unity] (1.5)", coef: 1.5, grades: [] },
       { name: "Animation 3D [Maya] (1.5)", coef: 1.5, grades: [] },
     ],

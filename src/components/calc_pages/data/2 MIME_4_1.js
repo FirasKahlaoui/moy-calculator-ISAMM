@@ -6,8 +6,8 @@ export const data = {
     subjects: [
       { name: "Mathématique pour le signal (2) ", coef: 2, grades: [] },
       { name: "Analyse du signal (2)", coef: 2, grades: [] },
-      { name: "Architecture des ordinateurs2 (2)", coef: 2, grades: [] },
-      { name: "Système d'exploitation2 (2)", coef: 2, grades: [] },
+      { name: "Architecture des ordinateurs 2 (2)", coef: 2, grades: [] },
+      { name: "Système d'exploitation 2 (2)", coef: 2, grades: [] },
       { name: "Réseaux (1)", coef: 1, grades: [] },
       { name: "Fondements de L'IA (4)", coef: 4, grades: [] },
     ],
