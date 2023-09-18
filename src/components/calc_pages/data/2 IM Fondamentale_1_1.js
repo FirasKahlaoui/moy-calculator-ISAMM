@@ -28,7 +28,7 @@ export const data = {
     placeholder: ["DS1 x 0.4", "DS2 x 0.4", "CC x 0.2"],
     coef: [0.4, 0.4, 0.2],
     subjects: [
-      { name: "Anglais3 (1)", coef: 1, grades: [] },
+      { name: "Anglais 3 (1)", coef: 1, grades: [] },
       { name: "Gestion d'entreprise (1)", coef: 1, grades: [] },
     ],
   },
