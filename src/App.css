@@ -380,9 +380,6 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   justify-content: center;
   background-color: var(--footer_background);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   color: var(--footer_text_color);
   padding: 20px;
 }
@@ -471,10 +468,8 @@ filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rota
   align-items: center;
   justify-content: center;
   background-image: var(--calc_background);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding: 20px;
+
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: background-image 0.3s ease-in-out;
