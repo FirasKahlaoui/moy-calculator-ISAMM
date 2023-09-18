@@ -4,7 +4,6 @@ import CreateForm from "../CreateForm.tsx";
 import { useTranslation } from "react-i18next";
 import { calculateAverage } from "../Formula.tsx";
 
-
 export const CalcIM = () => {
   const [category, setCategory] = useState(null);
   const [classNumber, setClassNumber] = useState(null);
