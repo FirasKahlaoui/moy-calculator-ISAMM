@@ -4,24 +4,32 @@ export const data = {
     placeholder: ["Exam x 0.7", "DS x 0.3"],
     coef: [0.7, 0.3],
     subjects: [
-      { name: "Algorithmique et programation(2) ", coef: 2, grades: [] },
+      { name: "Algorithmique et programmation (2) ", coef: 2, grades: [] },
       {
-        name: "Fondamentale théorique du multimédia 2 (1) ",
+        name: "Fondements théorique du multimédia 2 (1) ",
         coef: 1,
         grades: [],
       },
       {
-        name: "Conception et outils pour le web 2(1.5)",
+        name: "Concepts & outils pour le web 2 (1.5)",
         coef: 1.5,
         grades: [],
       },
       {
-        name: "Technologie et outils de création 2 (1.5)",
+        name: "Technologie & outils de création 2 (1.5)",
         coef: 1.5,
         grades: [],
       },
-      { name: "Introduction a la comm multi 2 (1.5)", coef: 1.5, grades: [] },
-      { name: "Eléments fonda de la musique 2 (1)", coef: 1, grades: [] },
+      {
+        name: "Introduction à la communication multimédia 2 (1.5)",
+        coef: 1.5,
+        grades: [],
+      },
+      {
+        name: "Eléments fondamentaux de la musique 2 (1)",
+        coef: 1,
+        grades: [],
+      },
     ],
   },
   cc: {
@@ -30,10 +38,10 @@ export const data = {
     coef: [0.4, 0.4, 0.2],
     subjects: [
       { name: "Techniques d'expression 2 (1)", coef: 1, grades: [] },
-      { name: "Synthese graphique(2)", coef: 2, grades: [] },
-      { name: "Compétences digitales(1.5)", coef: 1.5, grades: [] },
-      { name: "Compétences linguistiques 1(1)", coef: 1, grades: [] },
-      { name: "Compétences linguistiques 2(1)", coef: 1, grades: [] },
+      { name: "Synthése graphique (2)", coef: 2, grades: [] },
+      { name: "Compétences Digitales (1.5)", coef: 1.5, grades: [] },
+      { name: "Compétences linguistiques 1 (1)", coef: 1, grades: [] },
+      { name: "Compétences linguistiques 2 (1)", coef: 1, grades: [] },
     ],
   },
 };

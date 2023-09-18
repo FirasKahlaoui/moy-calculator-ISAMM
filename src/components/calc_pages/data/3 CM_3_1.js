@@ -14,12 +14,12 @@ export const data = {
     coef: [0.4, 0.4, 0.2],
     subjects: [
       {
-        name: "Développement d'application multimédia (design) (1.5)",
+        name: "Développement d'application multimédia [design] (1.5)",
         coef: 1.5,
         grades: [],
       },
       {
-        name: "Développement d'application multimédia (Technique) (1.5) ",
+        name: "Développement d'application multimédia [Technique] (1.5) ",
         coef: 1.5,
         grades: [],
       },
@@ -27,7 +27,7 @@ export const data = {
       { name: "Programation 3D (1.5)", coef: 1.5, grades: [] },
       { name: "Compétences linguistiques (1)", coef: 1, grades: [] },
       {
-        name: "Activité Entrepreneuriale (Web Marketing) (2)",
+        name: "Activité Entrepreneuriale [Web Marketing] (2)",
         coef: 2,
         grades: [],
       },

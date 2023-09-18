@@ -28,7 +28,7 @@ export const data = {
         coef: 1.5,
         grades: [],
       },
-      { name: "Projet fédéré (méthode Agile) (1)", coef: 1, grades: [] },
+      { name: "Projet fédéré [méthode Agile] (1)", coef: 1, grades: [] },
       {
         name: "Droit informatique, protection des données & éthique (1)",
         coef: 1,

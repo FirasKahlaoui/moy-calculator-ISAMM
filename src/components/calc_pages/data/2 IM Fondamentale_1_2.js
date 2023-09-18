@@ -22,7 +22,7 @@ export const data = {
         grades: [],
       },
       { name: "Fondements & Programmation IA (1.5)", coef: 1.5, grades: [] },
-      { name: "Tests de logiciels (Certification ISTQB) (1)", coef: 1, grades: [] },
+      { name: "Tests de logiciels [Certification ISTQB] (1)", coef: 1, grades: [] },
       { name: "Analyse Numérique (1.5)", coef: 1.5, grades: [] },
       { name: "Circuits logiques programmables (1.5)", coef: 1.5, grades: [] },
     ],
@@ -38,7 +38,7 @@ export const data = {
         coef: 1,
         grades: [],
       },
-      { name: "Projet fédéré (Méthode Agile) (1)", coef: 1, grades: [] },
+      { name: "Projet fédéré [Méthode Agile] (1)", coef: 1, grades: [] },
     ],
   },
 };

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import CreateForm from "../CreateForm.tsx";
-import { useTranslation } from "react-i18next";
-import { calculateAverage } from "../Formula.tsx";
+import CreateForm from "../CreateForm.js";
+import { calculateAverage } from "../Formula.js";
 
 export const CalcIM = () => {
   const [category, setCategory] = useState(null);
@@ -11,7 +10,7 @@ export const CalcIM = () => {
   const [data, setData] = useState(null);
   const [formData, setFormData] = useState({});
   const [average, setAverage] = useState(null);
-  const { t } = useTranslation();
+  console.log("average", average);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -36,6 +35,7 @@ export const CalcIM = () => {
   const handleInputChange = (event) => {
     const { name, value, id } = event.target;
     const index = id.split("-")[1];
+    console.log(`name: ${name}, value: ${value}, index: ${index}`);
     setFormData((prevFormData) => {
       const updatedGrades = [...(prevFormData[name] || [])];
       updatedGrades[Number(index)] = value;
@@ -58,23 +58,17 @@ export const CalcIM = () => {
       }
       formDataWithWeights[subject] = [weight, ...formData[subject]];
     }
+    console.log(formDataWithWeights);
     const averageCalculation = calculateAverage(formDataWithWeights);
     setAverage(averageCalculation);
     console.log("Weighted average:", averageCalculation);
-    navigate("/result", {
-      state: {
-        average: averageCalculation,
-        category: category,
-        classNumber: classNumber,
-        semester: semester,
-      },
-    });
+    navigate("/result", { state: { average: averageCalculation } });
   };
 
   return (
     <section className="calc--section">
       <h1 className="calc--title">
-        {classNumber} - {t("semester")} {semester}
+        {classNumber} - {semester} Semester
       </h1>
       <form className="calc--form" onSubmit={handleSubmit}>
         {data && (
@@ -87,15 +81,10 @@ export const CalcIM = () => {
         )}
         <input
           type="submit"
-          value={t("data_submit_button")}
+          value="Calculate"
           className="data--submit-button"
         />
       </form>
-      {average && (
-        <p className="calc--average">
-          {t("average_label")} {average}
-        </p>
-      )}
     </section>
   );
 };

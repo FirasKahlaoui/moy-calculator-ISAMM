@@ -19,7 +19,7 @@ export const data = {
       },
       { name: "Maillage 2D/3D (1)", coef: 1, grades: [] },
       {
-        name: "Développement d'applications web & multimédia (J2EE) (2)",
+        name: "Développement d'applications web & multimédia [J2EE} (2)",
         coef: 2,
         grades: [],
       },
@@ -37,8 +37,8 @@ export const data = {
         coef: 1,
         grades: [],
       },
-      { name: "Animation 2D avancée (Unity 2D) (1.5)", coef: 1.5, grades: [] },
-      { name: "Animation 3D avancée (Unity 3D) (1.5)", coef: 1.5, grades: [] },
+      { name: "Animation 2D avancée [Unity 2D] (1.5)", coef: 1.5, grades: [] },
+      { name: "Animation 3D avancée [Unity 3D] (1.5)", coef: 1.5, grades: [] },
     ],
   },
 };
