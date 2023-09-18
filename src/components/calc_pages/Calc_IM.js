@@ -36,7 +36,7 @@ export const CalcIM = () => {
   const handleInputChange = (event) => {
     const { name, value, id } = event.target;
     const index = id.split("-")[1];
-    console.log(`name: ${name}, value: ${value}, index: ${index}`);
+    /*console.log(`name: ${name}, value: ${value}, index: ${index}`);*/
     setFormData((prevFormData) => {
       const updatedGrades = [...(prevFormData[name] || [])];
       updatedGrades[Number(index)] = value;
@@ -59,10 +59,10 @@ export const CalcIM = () => {
       }
       formDataWithWeights[subject] = [weight, ...formData[subject]];
     }
-    console.log(formDataWithWeights);
+    /*console.log(formDataWithWeights);*/
     const averageCalculation = calculateAverage(formDataWithWeights);
     setAverage(averageCalculation);
-    console.log("Weighted average:", averageCalculation);
+    /*console.log("Weighted average:", averageCalculation);*/
     navigate("/result", {
       state: {
         average: averageCalculation,
