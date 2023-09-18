@@ -380,6 +380,9 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   justify-content: center;
   background-color: var(--footer_background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: var(--footer_text_color);
   padding: 20px;
 }

@@ -1,12 +1,12 @@
 :root{
-  --body_background: url("./assets/img/lightmood.jpg");
-  --body_nav_background: url("./assets/img/lightmood.jpg");
-  --result_background: url("./assets/img/lightmood.jpg");
-  --calc_background: url("./assets/img/lightmood.jpg");
+  --body_background: url("./assets/img/light_mode.jpg");
+  --body_nav_background: url("./assets/img/light_mode.jpg");
+  --result_background: url("./assets/img/light_mode.jpg");
+  --calc_background: url("./assets/img/light_mode.jpg");
   --calc_text_color: #000000;
   --calc_border_color: #000000;
   --result_text_color: #000000;
-  --result_loader_background: url("./assets/img/lightmood.jpg");
+  --result_loader_background: url("./assets/img/light_mode.jpg");
   --result_loader_color: #000000;
   --body_color: #000000;
   --link_color: navy;
@@ -28,19 +28,19 @@
   --button_hover_color: #fff;
   --main_select_color: #f0f0f0;
   --main_select_text_color: #333333;
-  --nav_scroll_background: rgb(162, 157, 157);
+  --nav_scroll_background: rgb(188, 169, 183);
   
 }
 
 [data-theme="dark"]{
-  --body_background: url("./assets/img/darkmood.jpg");
-  --body_nav_background: url("./assets/img/darkmood.jpg");
-  --result_background: url("./assets/img/darkmood.jpg");
-  --calc_background: url("./assets/img/darkmood.jpg");
+  --body_background: url("./assets/img/dark_mode.jpg");
+  --body_nav_background: url("./assets/img/dark_mode.jpg");
+  --result_background: url("./assets/img/dark_mode.jpg");
+  --calc_background: url("./assets/img/dark_mode.jpg");
   --calc_text_color: #ffffff;
   --calc_border_color: #ffffff;
   --result_text_color: #ffffff;
-  --result_loader_background: url("./assets/img/darkmood.jpg");
+  --result_loader_background: url("./assets/img/dark_mode.jpg");
   --result_loader_color: #ffffff;
   --body_color: #ffffff;
   --link_color: cyan;
