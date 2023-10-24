@@ -6,13 +6,13 @@ export const data = {
     subjects: [
       { name: "Probabilité & statistique (2)", coef: 2, grades: [] },
       {
-        name: "Théorie des langages & des Automates (1)",
+        name: "Théorie des langages & des Automates [TLA] (1)",
         coef: 1,
         grades: [],
       },
       { name: "Graphes & optimisation (1)", coef: 1, grades: [] },
       {
-        name: "Conception des Systèmes d'information (1.5)",
+        name: "Conception des Systèmes d'information [UML] (1.5)",
         coef: 1.5,
         grades: [],
       },
