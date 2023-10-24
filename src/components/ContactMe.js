@@ -20,7 +20,7 @@ export const ContactMe = () => {
           <img src={navIcon1} alt="Icon" title="LinkedIn" />
         </a>
         <a href="https://github.com/FirasKahlaoui" target="blank">
-          <img src={navIcon5} alt="" title="GitHub" />
+          <img src={navIcon5} alt="Icon" title="GitHub" />
         </a>
       </div>
       <p></p>
